@@ -1,0 +1,23 @@
+{
+  "name": "cypress-sam-media",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lubna-shaikh/cypress-sam-media.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lubna-shaikh/cypress-sam-media/issues"
+  },
+  "homepage": "https://github.com/lubna-shaikh/cypress-sam-media#readme",
+  "devDependencies": {
+    "cypress": "^3.1.0"
+  }
+}

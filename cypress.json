@@ -1,0 +1,4 @@
+{
+    "baseUrl": "https://quiet-sands-70900.herokuapp.com/",
+    "integrationFolder": "./cypress/test"
+}
