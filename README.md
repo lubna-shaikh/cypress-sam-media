@@ -9,8 +9,8 @@ Following are the details:
 
     {
         "baseUrl": "https://quiet-sands-70900.herokuapp.com/",
-        "integrationFolder": "./cypress/test"
         
+        "integrationFolder": "./cypress/test"      
     }
 
 3. Default value for 'scripts' in 'package.json' are overridden as follows:
