@@ -60,5 +60,29 @@ describe('TS0001 - Test Scenario to verify the functionality of Sample Applicati
       .visit('/')
     }
   });
+  
+   it('Should not accept any value other than valid MSISDN - TC0006', () => {
+    for (var i in invalidMsisdn) {
+      var msisdnInput = cy.get(td.testData.valid.msisdnLocator).type(invalidMsisdn[i]);
+      cy.get(td.testData.valid.msisdnSubmit).click()
+      if (msisdnInput != td.testData.valid.msisdnInput) {
+        cy.get(td.testData.error.msisdn).contains(td.testData.error.msisdnMessage)
+          .visit('/')
+      }
+    }
+  });
+  
+  it('Should not accept any value other than valid PIN - TC0007', () => {
+    for (var i in invalidPin) {
+      cy.get(td.testData.valid.msisdnLocator).type(td.testData.valid.msisdnInput)
+        .get(td.testData.valid.msisdnSubmit).click()
+      var pinInput = cy.get(td.testData.valid.pinLocator).type(invalidPin[i]);
+      cy.get(td.testData.valid.pinSubmit).click()
+      if (pinInput != td.testData.valid.pinInput) {
+        cy.get(td.testData.error.pin).contains(td.testData.error.pinMessage)
+          .visit('/')
+      }
+    }
+  });
 
 });
